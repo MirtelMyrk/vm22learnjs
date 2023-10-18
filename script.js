@@ -59,3 +59,34 @@ console.log(num);
 let array = [1, 2, true, 1.2, 'hello'];
 console.log(array);
 console.log(array[4])
+
+for (let i=0; i<=10; i++) {
+    console.log(i);
+}
+// kui let i=suurem ku i<number siis see ei tööta, kui panna i-- siis ta hakkab lugema tagurpidi
+let i=1;
+while (i<1_000_000) {
+    i*=2;
+    console.log(i);
+}
+
+let fruits= ['banana', 'cherry', 'apple', 'pear'];
+
+for(let i=0; i<fruits.length; i++) {
+    console.log(fruits[i])
+}
+
+for(const fruit of fruits) {
+    console.log(fruit);
+}
+
+let object = {
+    name: 'Mir',
+    age: 17,
+    eyes: 'grey'
+}
+
+for(const property in object){
+    console.log(property);
+    console.log(object[property]);
+}
