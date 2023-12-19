@@ -7,6 +7,10 @@ nunjucks.configure('ylessanne/views', {
 });
 app.use(express.urlencoded ());
 
+function calcHypotenuse(a, b) {
+    return Math.sqrt(a * a + b * b);
+  }
+
 app.get('/', function (req, res) {
     let name = req.query.name;
     let age = req.query.age;
@@ -21,6 +25,17 @@ app.post('/answer', function (req, res) {
 
 app.get('/about', function (req, res) {
     res.render('about.njk');
+});
+
+app.get('/calc', function (req, res) {
+    res.render('calc.njk');
+});
+
+app.post('/a', function (req, res) {
+    let a = req.body.a;
+    let b = req.body.b;
+    let c = calcHypotenuse(a, b);
+    res.render('a.njk', { a, b, c });
 });
 
 app.listen(3000);

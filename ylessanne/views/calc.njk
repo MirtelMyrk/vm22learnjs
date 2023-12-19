@@ -1,0 +1,22 @@
+{% extends 'partials/layout.njk' %}
+{% block title %}Pythagoras{% endblock %}
+
+{% block content %}
+    <h1>Pythagoras</h1>
+    <h3>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></h3> <br>
+
+    
+    <form action="/a" method="POST">
+        <div class="mb-3">
+            <label for="a" class="form-label">A</label>
+            <input type="number" min="1" class="form-control" id="a" placeholder="A" name="a">
+        </div>
+        <div class="mb-3">
+            <label for="b" class="form-label">B</label>
+            <input type="number" min="1" class="form-control" id="b" placeholder="B" name="b">
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </form>
+{% endblock %}
